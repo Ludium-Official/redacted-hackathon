@@ -21,6 +21,7 @@ We belive that the system will open doors for the trust network of builders wher
 
 ## Technical Breakdown
 
+
 ## Use Cases
 
 ## Business Model
