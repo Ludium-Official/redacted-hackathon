@@ -50,20 +50,15 @@ We see that there are four primary uses cases to Luduim's Pathfinder; namely, ed
 
 
 ## Business Model
+![Platform Structure](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Platform%20Structure.png?raw=true)
+Ludium's system consists of builders, sponsors, and validators that interact with one another. Sponsors deposit amount to launch programs that recruit talent whereas builders participat in the program. Validators stake on builders to provide bakcings. Whenver a particular action happen, there is a fee charaged from the platform.
+
+### Revenue Structure
+![Revenue Structure](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Revenue%20Model.png?raw=true)
+For instance, sponsors pay 5% for the amount of deposit made. Validators and builders pay 5% whenever they are supposed to receive the payment. Builders pay transaction fee when they issue credential through builder profile. Finally, all members are subjected to a subscription fee when engaging with premium recommender services.
 
 ## Road Map
-|   | 2024 | 2025 | 2026 |
-| --- | ---- | ---- | ---- |
-|   | Q4 | Q1 | Q2 | Q3 | Q4 | Q1 | Q2 |
-| Fiancne | Grants/<br>Investment | Foundation Grants | Seed Investment |   |   |
-| Business Revenue | HR Agency | Issue Career Credential |   | AI Recommender Service |
-| Business | Sponsor | Web3 Foundation | Global Blockchain Corporation |   |   |
-| Validator | Korean<br>Community | Global Builder<br>Community Hubs |   |  Traditional University / HR Agency |
-| Builder | Korean<br>Developers | Global Developers /<br>Diverse Talent Pool |   | Traditional HR including Startups |
-| Development | MetaID |   | Builder Profile | Onchain DID | Enhance soverignty |
-| CMS |   | Primitive Analysis | Enhanced Analysis | Autonomous Agent Based HR |
-| Treasury |   | Multichain Settlement |   | Native Tokenomics |
-| Goal |  Traction | 1,000x Monthly Active Builders |   | 10,000x Monthly Active Builders |   |
-|   | Revenue | 300K USD in Payment | 700K USD in Payment | 1.2M USD in Payment | 1.8M USD in Payment |
+![Road Map](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Road%20Map.png?raw=true)
+For now, Ludium is focused on onbaording Web3 developers in Korea to the global scene. However, as we gradually expand the network, Ludium is looking to collaborate with global builder community including Planners, BD, marketers and etc. In the end, it strives to pave a new 
 
 ## Team
