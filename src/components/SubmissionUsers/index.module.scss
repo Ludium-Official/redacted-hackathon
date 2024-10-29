@@ -1,0 +1,74 @@
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+
+  .wrapper {
+    border-bottom: 1px solid var(--grey-04);
+    padding: 30px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-bottom: 15px;
+
+      .leftSide {
+        display: flex;
+        align-items: center;
+
+        .addressWrapper {
+          display: flex;
+          align-items: center;
+
+          margin-left: 10px;
+
+          .address {
+            max-width: 200px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .submissionBtn {
+        background-color: var(--purple-01);
+        padding: 5px 10px;
+        border-radius: 40px;
+
+        font-size: 12px;
+      }
+    }
+
+    .progressWrapper {
+      position: relative;
+
+      width: 100%;
+      padding: 5px;
+      background-color: var(--grey-05);
+      border-radius: 40px;
+
+      .progressBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 5px;
+        background-color: var(--purple-01);
+        border-radius: 40px;
+      }
+    }
+  }
+}

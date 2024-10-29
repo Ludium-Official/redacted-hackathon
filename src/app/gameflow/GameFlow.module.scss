@@ -1,0 +1,166 @@
+.gameFlowContainer {
+  --background-color: #1f1f38;
+  --accent-color-1: #0079ff;
+  --accent-color-2: #00e5ff;
+  --accent-color-dark: #2a2a3e;
+  --highlight-color: #c7c7e8;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-shadow-color: rgba(0, 128, 255, 0.6);
+  --primary-text: #b2b2cc;
+  --button-gradient: linear-gradient(90deg, #0079ff, #00e5ff);
+  --button-hover-gradient: linear-gradient(90deg, #00e5ff, #0079ff);
+}
+
+.gameFlow {
+  composes: gameFlowContainer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: radial-gradient(circle at top left, var(--background-color), #141427);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px var(--shadow-color);
+}
+
+.gameStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1c1c2e, #29293d);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-out;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(199, 199, 232, 0.6);
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    line-height: 1.5;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: var(--button-gradient);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 128, 255, 0.4);
+
+    &:hover {
+      background: var(--button-hover-gradient);
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 12px var(--hover-shadow-color);
+    }
+  }
+}
+
+.recommendedProfiles {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.profileCard {
+  background: var(--accent-color-dark);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 140px;
+  color: var(--highlight-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 0, 119, 0.5);
+  }
+
+  h3 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #b0b0d0;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff0077, #ff5f77);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 0, 119, 0.3);
+
+    &:hover {
+      background: linear-gradient(90deg, #ff5f77, #ff0077);
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 12px rgba(255, 0, 119, 0.5);
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .gameFlow {
+    padding: 15px;
+  }
+
+  .gameStep {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .profileCard {
+    width: 100px;
+    padding: 10px;
+  }
+}
+
+
+  
+  

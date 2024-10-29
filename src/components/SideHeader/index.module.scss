@@ -1,0 +1,113 @@
+.container {
+  z-index: 99;
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--white);
+  width: 247px;
+  height: 100dvh;
+  padding: 20px 40px 40px 0;
+}
+
+.sideContent {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    padding-left: 20px;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-top: 45px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    .connectBtnWrapper {
+      padding-left: 6px;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background: none;
+        box-shadow: none;
+
+        color: var(--grey-02);
+        font-weight: 500;
+
+        &::before {
+          display: block;
+
+          content: '';
+          background-image: url('../../assets/header/ProfileLogo.svg');
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .link {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      &.this {
+        background-color: var(--purple-04);
+
+        color: var(--purple-01) !important;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+    }
+  }
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 20px;
+
+  color: var(--grey-04);
+  font-size: 12px;
+
+  .subLogo {
+    margin-bottom: 16px;
+  }
+
+  .companyInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 12px;
+  }
+
+  .contactWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-bottom: 12px;
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
