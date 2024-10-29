@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "target": "ES2020",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "incremental": true,
+        "paths": {
+            "@src/*": ["./src/*"],
+            "@common/*": ["./src/common/*"],
+            "@shared/*": ["./src/shared/*"],
+            "@config": ["./src/config"],
+            "@modules/*": ["./src/modules/*"]
+        },
+        "plugins": [
+            {
+                "transform": "@nestia/core/lib/transform",
+                "validate": "assert",
+                "stringify": "assert"
+            },
+            {
+                "transform": "@nestia/sdk/lib/transform"
+            },
+            {
+                "transform": "typia/lib/transform"
+            }
+        ]
+    }
+}
