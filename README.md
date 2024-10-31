@@ -4,6 +4,7 @@
 Ludium is a Web3 builder commutunity in Korea that provides career opportunities for builders through educaiton, contents, bounties, and grants. In Web3 industry, hackathons serve as a great segway to onbaord new talents. However, from the beginner's perspective, it is hard to find a team, recieve feedbacks, and wait for the prize settlemtent. Ludium offers a AI based Web3 builder matching system that analyze the builder's skill set, assign teams, judge reulsts and settle payment through autnomous system.       
 
 ## Problem
+![Problem](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/problem.png?raw=true)
 According to [the statistics](https://www.risein.com/blog/are-web3-hackathons-truly-effective-a-critical-examination), there is 4.4m $USD spent on prizes for hackathons during Q1 2024 through Dorahacks platform alone. It is needless to say that hackathons are the primary funnels for onbaording the new talents onto Web3. However, from the experience of the beginner, there are three challendges
 1. It is difficult to **find a team who can provide complementary skills** for the successful hackathon. Practially speaking it requires more than one developer, much more likely to invovle skill sets including business developers and designers, for a quality project to come out.   
 2. During the hackathon, teams rarely **recieve proper feedback** to further develop the project. In extreme cases, judgement results are not transparent enough for teams to know how their projects were viewed as supposed to the other projects.
@@ -11,7 +12,7 @@ According to [the statistics](https://www.risein.com/blog/are-web3-hackathons-tr
 For some builders, one unpleasant experience deters their entire carrier journey into Web3. From the talent acquisition and retention point of view, there are rooms for improvement.
 
 ## Solution
-
+![builder-matching-system](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Builder%20matching%20system.png?raw=true)
 Ludium propose a Web3 Builder Matching System that consists of the following features: 
 1. **Talent Analysis**: Collect individual builder's data from diverse sources (ex. Github) to analyze and assess the individual skill sets
 2. **Team Matching**: Assign builders based on the talent analysis to the most optimized tasks. It may involve team works in which case the positions are assigned based on the requirement and individual skill sets
