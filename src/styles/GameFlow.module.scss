@@ -1,0 +1,224 @@
+// Color Variables
+:root {
+    --background-color: #1c1c2e;
+    --accent-color-1: #0079ff;
+    --accent-color-2: #00e5ff;
+    --highlight-color: #c7c7e8;
+    --primary-text: #b2b2cc;
+    --secondary-text: #8a8aaf;
+    --card-background: #2a2a3e;
+    --button-gradient: linear-gradient(90deg, #0079ff, #00e5ff);
+    --button-hover-gradient: linear-gradient(90deg, #00e5ff, #0079ff);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --hover-shadow-color: rgba(0, 128, 255, 0.6);
+  }
+  
+  // Main Container for Centering
+  .gameFlow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--background-color);
+    color: var(--highlight-color);
+  }
+  
+  // Page Title
+  .pageTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  // Game Step Card
+  .gameStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: var(--card-background);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px var(--shadow-color);
+    animation: fadeIn 0.6s ease-out;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      color: var(--highlight-color);
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      color: var(--primary-text);
+      line-height: 1.5;
+      max-width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  // Button Style
+  .startGameFlowButton {
+    background: var(--button-gradient);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 128, 255, 0.4);
+  
+    &:hover:not(:disabled) {
+      background: var(--button-hover-gradient);
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 15px var(--hover-shadow-color);
+    }
+  
+    &:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+  }
+  
+  // Bounty List Styles
+  .bountyList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  // Individual Bounty List Item
+  .bountyItem {
+    background-color: var(--accent-color-1);
+    color: #fff;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 10px var(--shadow-color);
+  
+    &:hover {
+      background-color: var(--accent-color-2);
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 15px var(--hover-shadow-color);
+    }
+  
+    .bountyTitle {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    .bountyDetails {
+      font-size: 1rem;
+      color: var(--secondary-text);
+    }
+  }
+  
+  // Profile Card for Recommended Team Members
+  .profileCard {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 140px;
+    color: var(--highlight-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(255, 0, 119, 0.5);
+    }
+  
+    h3 {
+      margin: 5px 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 0.9rem;
+      color: #b0b0d0;
+    }
+  
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      color: #fff;
+      background: linear-gradient(90deg, #ff0077, #ff5f77);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0px 4px 12px rgba(255, 0, 119, 0.3);
+  
+      &:hover {
+        background: linear-gradient(90deg, #ff5f77, #ff0077);
+        transform: translateY(-3px);
+        box-shadow: 0px 6px 15px rgba(255, 0, 119, 0.5);
+      }
+    }
+  }
+  
+  // Fade-in Animation for Smooth Appearance
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Responsive Adjustments for Mobile
+  @media (max-width: 768px) {
+    .gameFlow {
+      padding: 15px;
+    }
+  
+    .gameStep {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .profileCard {
+      width: 100px;
+      padding: 12px;
+    }
+  
+    .startGameFlowButton {
+      padding: 10px 20px;
+    }
+  }
+
+
+  
+  
+  
+  
+  

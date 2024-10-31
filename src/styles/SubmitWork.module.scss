@@ -1,0 +1,84 @@
+:root {
+    --background-color: #1b1b32;
+    --card-background: #29293e;
+    --highlight-color: #c7c7e8;
+    --input-background: #33334d;
+    --button-gradient: linear-gradient(135deg, #0079ff, #00e5ff);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --button-shadow-color: rgba(0, 128, 255, 0.6);
+  }
+  
+  // Page container
+  .pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: radial-gradient(circle at top left, #141427, var(--background-color));
+  }
+  
+  // Card styling
+  .card {
+    background: var(--card-background);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  // Title styling
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(199, 199, 232, 0.8);
+  }
+  
+  // Form styling
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: var(--input-background);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  // Submit button styling
+  .submitButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--button-gradient);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px var(--button-shadow-color);
+  
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px var(--button-shadow-color);
+    }
+  }
+  

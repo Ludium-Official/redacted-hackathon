@@ -1,0 +1,249 @@
+:root {
+    --background-color: #1b1b32;
+    --card-background: #29293e;
+    --accent-color-1: #0079ff;
+    --highlight-color: #c7c7e8;
+    --primary-text: #b2b2cc;
+    --secondary-text: #8a8aaf;
+    --badge-background: #33334d;
+    --select-button-gradient: linear-gradient(135deg, #ff0077, #ff5f77);
+    --confirm-button-gradient: linear-gradient(135deg, #0079ff, #00e5ff);
+    --card-shadow-color: rgba(0, 0, 0, 0.3);
+    --button-shadow-color: rgba(255, 0, 119, 0.6);
+    --hover-shadow-color: rgba(0, 128, 255, 0.6);
+  }
+  
+  // Main container for the Recommended Teammates page
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top left, #141427, var(--background-color));
+    color: var(--highlight-color);
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  // Title styling with a subtle glowing effect
+  .pageTitle {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color);
+    text-align: center;
+    text-shadow: 0px 0px 15px rgba(199, 199, 232, 0.8);
+  }
+  
+  // Container for teammate cards with central alignment
+  .teammateList {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    background: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--card-shadow-color);
+  }
+  
+  // Teammate card styling
+  .teammateCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: var(--highlight-color);
+    box-shadow: 0 5px 15px var(--card-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 0.5s ease-out;
+  
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px var(--hover-shadow-color);
+    }
+  }
+  
+  // Teammate name and role styling
+  .builderName {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0 5px;
+    text-shadow: 0 0 5px rgba(199, 199, 232, 0.5);
+  }
+  
+  .builderRole {
+    font-size: 1rem;
+    color: #b0b0d0;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  // Experience badge styling
+  .builderExperience {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+    background: var(--badge-background);
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  // Profile details section (followers and contributions)
+  .profileDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--primary-text);
+    font-size: 0.9rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 12px;
+    margin-top: 5px;
+    background: var(--badge-background);
+    border-radius: 6px;
+  }
+  
+  .detailLabel {
+    font-weight: bold;
+    color: var(--highlight-color);
+  }
+  
+  .detailValue {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  // Languages and frameworks section with badge styling
+  .languageFrameworkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .languageList, .frameworkList {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .languageItem, .frameworkItem {
+    background: var(--accent-color-1);
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  
+  // Select button with gradient and hover effects
+  .selectButton {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--select-button-gradient);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 12px var(--button-shadow-color);
+  
+    &:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #ff5f77, #ff0077);
+      box-shadow: 0px 8px 18px var(--button-shadow-color);
+    }
+  }
+  
+  // Confirm button styling with additional animation
+  .confirmButton {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--confirm-button-gradient);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 128, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-4px);
+      background: linear-gradient(135deg, #00e5ff, #0079ff);
+      box-shadow: 0 10px 22px var(--hover-shadow-color);
+    }
+  }
+  
+  // Animations for smooth appearance
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  // Responsive adjustments for mobile screens
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 20px;
+    }
+  
+    .teammateList {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .teammateCard {
+      width: 100%;
+      max-width: 260px;
+    }
+  
+    .confirmButton {
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

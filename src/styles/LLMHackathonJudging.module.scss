@@ -1,0 +1,86 @@
+:root {
+    --background-color: #1b1b32;
+    --card-background: #29293e;
+    --highlight-color: #c7c7e8;
+    --button-gradient: linear-gradient(135deg, #0079ff, #00e5ff);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  // Page container
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: radial-gradient(circle at top left, #141427, var(--background-color));
+    color: var(--highlight-color);
+    text-align: center;
+  }
+  
+  // Title styling
+  .title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+    text-shadow: 0px 0px 10px rgba(199, 199, 232, 0.8);
+  }
+  
+  // Section styling
+  .criteriaSection, .teamsSection, .resultsSection {
+    background: var(--card-background);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+  }
+  
+  // Team card styling
+  .teamCard, .resultCard {
+    background: var(--card-background);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: #b2b2cc;
+  }
+  
+  .teamName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  // Evaluate button styling
+  .evaluateButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--button-gradient);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 12px rgba(0, 128, 255, 0.6);
+  
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 18px rgba(0, 128, 255, 0.8);
+    }
+  }
+  
+  

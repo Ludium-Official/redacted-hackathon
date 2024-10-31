@@ -1,0 +1,83 @@
+:root {
+    --background-color: #1b1b32;
+    --card-background: #29293e;
+    --highlight-color: #c7c7e8;
+    --button-gradient: linear-gradient(135deg, #0079ff, #00e5ff);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --button-shadow-color: rgba(0, 128, 255, 0.6);
+  }
+  
+  // Main container for the RewardDistribution page
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top left, #141427, var(--background-color));
+    color: var(--highlight-color);
+    text-align: center;
+  }
+  
+  // Title styling with a subtle glowing effect
+  .title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+    text-shadow: 0px 0px 10px rgba(199, 199, 232, 0.8);
+  }
+  
+  // Section styling for status and distribution
+  .statusSection, .distributionSection {
+    background: var(--card-background);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+  }
+  
+  // Distribution button styling
+  .distributeButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: var(--button-gradient);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 12px var(--button-shadow-color);
+  
+    &:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #00e5ff, #0079ff);
+      box-shadow: 0px 8px 18px var(--button-shadow-color);
+    }
+  }
+  
+  // Confirmation message styling
+  .confirmationMessage {
+    background: var(--card-background);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    color: #b2b2cc;
+    font-size: 1.1rem;
+  }
+  
