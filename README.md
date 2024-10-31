@@ -1,64 +1,41 @@
-# [Ludium] Web3 Career Pathfinder
+# [Ludium] Web3 Builder Matching System
 
 ## Overview
-Ludium is a Web3 builder commutunity in Korea that provides career opportunities for builders through educaiton, contents, bounties, and grants. From the three years of serivces, we realized that the Web3 industry needs more advanced HR system in order to onbaord and retain talents. For this reason, we developed a Web3 Career Pathfinder service that assesses the builder profile to provide the most optimized task. 
+Ludium is a Web3 builder commutunity in Korea that provides career opportunities for builders through educaiton, contents, bounties, and grants. In Web3 industry, hackathons serve as a great segway to onbaord new talents. However, from the beginner's perspective, it is hard to find a team, recieve feedbacks, and wait for the prize settlemtent. Ludium offers a AI based Web3 builder matching system that analyze the builder's skill set, assign teams, judge reulsts and settle payment through autnomous system.       
 
 ## Problem
-![Web3 Developers](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Web3%20Developers.png?raw=true)
-Web3 is suffering from the shortage of talent. According to the recent [statistics](https://www.developerreport.com/), there is a 56% decline in the number of new developers in the Web3 ecosystem. Although [the average salary](https://bridgeteams.com/blog/overview-of-web3-developer-salary-median-pay-bonuses-and-benefits/) is 20-40% higher than that of the conventional IT industry, new talents fail to stay for longer period of time. 
-
-We believe that there are three systemetic problems to Web3 HR: 
-1. **No Standard Track**: In the conventional world, educational institutions and corporations provide standard passage into the industry. In Web3, however, there is no established track that defines the builder's career passage. It makes it more difficult for builders to pave their own way without a proper guidance
-2. **No Proof of Talent**: Conventional talent and ability is proven by the resume received from institutions such as educational degree, job title and recommendation letters. However, Web3 resume is much more diverse, consisting of project participations, hackathons, twitter posts, and etc. These records are more difficult to validate and trust
-3. **No Assurance**: Regular employment is enforced by the contract to ensure the quality of work and payment. However, Web3 projects are often unprotected which leaves both the employer and employee vulnerable to the settlement issue
-
-All these problems makes it difficult for the new comers to onboard to Web3. Even if they try out for a short while, the rate of retention falls sharply because of the lack of systematic career development.
+According to [the statistics](https://www.risein.com/blog/are-web3-hackathons-truly-effective-a-critical-examination), there is 4.4m $USD spent on prizes for hackathons during Q1 2024 through Dorahacks platform alone. It is needless to say that hackathons are the primary funnels for onbaording the new talents onto Web3. However, from the experience of the beginner, there are three challendges
+1. It is difficult to **find a team who can provide complementary skills** for the successful hackathon. Practially speaking it requires more than one developer, much more likely to invovle skill sets including business developers and designers, for a quality project to come out.   
+2. During the hackathon, teams rarely **recieve proper feedback** to further develop the project. In extreme cases, judgement results are not transparent enough for teams to know how their projects were viewed as supposed to the other projects.
+3. After the hackathon is over, **the prize settlment usually takes too long** which leaves terrible impression on Foundationa and Web3 industry in general. From KYC to the actual payment, it may take months before the settlement.
+For some builders, one unpleasant experience deters their entire carrier journey into Web3. From the talent acquisition and retention point of view, there are rooms for improvement.
 
 ## Solution
 **(Demo Video / Screenshot)**
 
-Ludium believe that Web3 HR can be improved thorugh the following systems:
-1. **Talent Analysis**: Collect individual builder's data from diverse sources (ex. Github / LinkedIn) to analyze and assess the individual skill sets
-2. **Builder Matching System**: Assign builders based on the talent analysis to the most optimized tasks. It may involve team works in which case the positions are assigned based on the requirement and individual skill sets
-3. **Onchain Contract Enforcement**: Validate the work provided by the builder. For all tasks assigned, the payment amount is deposited in advance. The payment is settled when the work is validated
-We belive that the system will open doors for the trust network of builders where the new way of work 
+Ludium propose a Web3 Builder Matching System that consists of the following features: 
+1. **Talent Analysis**: Collect individual builder's data from diverse sources (ex. Github) to analyze and assess the individual skill sets
+2. **Team Matching**: Assign builders based on the talent analysis to the most optimized tasks. It may involve team works in which case the positions are assigned based on the requirement and individual skill sets
+3. **Automated Judgement**: Based on the set criteria and the projects submitted automated asgent assess the project to determine the best project
+4. **Onchain Contract Enforcement**: Validate the work provided by the builder. For all tasks assigned, the payment amount is deposited in advance. The payment is settled when the work is validated
+ 
 
 ## Technical Breakdown
 ![BMS Redacted Overview](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/redacted.png?raw=true)
 
 Ludium's pathfinder consists of three core pillars
-1. **MetaID**: Onchain Self Sovereign ID(SSI) that stores builder data. It interacts with offchain data (ex. Github /LinkedIN) using Reclaim Protocol's zkTLS data entry SDK
-2. **Career Management System(CMS)**: AI algorithm based engines that analyzes skill sets, assign tasks, and assess the work for verfication 
-3. **Builder Contract**: Onchain contract that holds the deposits for the work order and staked token for builder voucher 
-
-### MetaID
-
-### CMS 
-
-### Builder Contract
+1. **Onchain Builder Profile**: Onchain Self Sovereign ID(SSI) that stores builder data. It interacts with offchain data (ex. Github) using Reclaim Protocol's zkTLS data entry SDK
+2. **Mathcing Agent**: AI Agent that process the skill sets and matches 
+3. **Task Assessment Agent**: AI agent that analyzes skill sets, assign tasks, and assess the work for verfication 
+4. **Onchain Prize Contract**: Onchain contract that holds the deposits for the hackathon prizes and distribute it when the team chooses the payment 
 
 ## Use Cases
-We see that there are four primary uses cases to Luduim's Pathfinder; namely, education, contest, bounty and grant program management 
-
-|  | Education | Contest | Bounty | Grant |
-| --- | --------- | ------- | ------ | ----- |
-| Definition | Articles and missions that explains the critical concepts or provide exercises to enhance their skill | On/offline event where builders submit their work to receive reward based on the performance | Assigned tasks that involves specific work for each individual with pre-defined metrics | Request for creative work or proposal that involves market reach out / adoption strategy  |
-| Value Proposition | Learner Incentivization | Talent upscale and exposure through competition | Web3 freelancing and work outsourcing | Financial / Non-financial support for Go to Market  |
-| Target Sponsor | Web3 Foundations / Government / Educational Institution | Organizations looking for builder targeted marketing exposure | Organizations looking to outsource through asynchronous, project based hiring | Organizations looking for a business on their ecosystem |
-| Target Builder | Students / Web3 New Comers | Students / Web3 builders looking to make their name known | Individual freelancer with the basic understanding of the tasks provided | Qualified individuals/ teams looking to start a new business |
-| Examples | \- Mission / Quests<br>\- Challenge | \- Ideathons<br>\- Hackathons<br>\- CTF / Problem Solving | \- Hiring / Referral<br>\- Article publishing / Marketing<br>\- UI/UX Design<br>\- Development Outsourcing | \- Community / Event<br>\- Application Development<br>\- Infra Development |
-
-
-## Business Model
-![Platform Structure](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Platform%20Structure.png?raw=true)
-Ludium's system consists of builders, sponsors, and validators that interact with one another. Sponsors deposit amount to launch programs that recruit talent whereas builders participat in the program. Validators stake on builders to provide bakcings. Whenver a particular action happen, there is a fee charaged from the platform.
-
-### Revenue Structure
-![Revenue Structure](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Revenue%20Model.png?raw=true)
-For instance, sponsors pay 5% for the amount of deposit made. Validators and builders pay 5% whenever they are supposed to receive the payment. Builders pay transaction fee when they issue credential through builder profile. Finally, all members are subjected to a subscription fee when engaging with premium recommender services.
+Although  
 
 ## Road Map
-![Road Map](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/Road%20Map.png?raw=true)
-For now, Ludium is focused on onbaording Web3 developers in Korea to the global scene. However, as we gradually expand the network, Ludium is looking to collaborate with global builder community including Planners, BD, marketers and etc. In the end, it strives to pave a new 
+1. Talent Analysis
+2. Matching Agent
+3. Automated Judgement
+4. Onchain Prize Contract
 
 ## Team
