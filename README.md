@@ -11,7 +11,6 @@ According to [the statistics](https://www.risein.com/blog/are-web3-hackathons-tr
 For some builders, one unpleasant experience deters their entire carrier journey into Web3. From the talent acquisition and retention point of view, there are rooms for improvement.
 
 ## Solution
-**(Demo Video / Screenshot)**
 
 Ludium propose a Web3 Builder Matching System that consists of the following features: 
 1. **Talent Analysis**: Collect individual builder's data from diverse sources (ex. Github) to analyze and assess the individual skill sets
@@ -25,17 +24,23 @@ Ludium propose a Web3 Builder Matching System that consists of the following fea
 
 Ludium's pathfinder consists of three core pillars
 1. **Onchain Builder Profile**: Onchain Self Sovereign ID(SSI) that stores builder data. It interacts with offchain data (ex. Github) using Reclaim Protocol's zkTLS data entry SDK
-2. **Mathcing Agent**: AI Agent that process the skill sets and matches 
-3. **Task Assessment Agent**: AI agent that analyzes skill sets, assign tasks, and assess the work for verfication 
-4. **Onchain Prize Contract**: Onchain contract that holds the deposits for the hackathon prizes and distribute it when the team chooses the payment 
+2. **Mathcing Agent**: AI Agent that process the skill sets and matches the team based on the different skill sets
+3. **Task Assessment Agent**: AI agent that judges the submitted project based on the set criteria from the requirement
+4. **Onchain Prize Contract**: Onchain contract that holds the deposits for the hackathon prizes and distribute it when the team chooses the payment. It utilizes Chain Abstraction by Near so that pools can be set up in anychain(currently Ethereum / Near) whereas one treasury can be used for the settlement
 
 ## Use Cases
-Although  
+Beyond hackathon, there are three potential usecases for the system 
+1. **Education**: Based on the level of skill on the profile, one can be matched to an educational program or a program manager. The recommended program can not only be targeted to enhance the pre-existing skill but also to acquire new skills that were previously not found 
+2. **Recruiting**: Foundations and corporations can put up bounties with tasks to search and recruit builders needed. Recruiting could be full time job, in which case the bounty is for head hunting / referral whereas for the freelancing, the bounty can be for the task completion itself
+3. **Incubation**: The current grants are structured around RFPs that requests for products and services to boost the ecosystem. Individuals and teams can be matched with an incubator so that projects can submit proposal, negotiate on the terms and conditions especially around an agreeable milestones, deliver the results, and receive payment for the completion
 
-## Road Map
-1. Talent Analysis
-2. Matching Agent
-3. Automated Judgement
-4. Onchain Prize Contract
+## Points for Improvement
+1. **Wider Data Sets**: For the purpose of this hackathon, we activated github as the primary source of data for analysis. The scope is limited to developers with skills on frontend, backend, and contract. However, with more data entry points, such as linkedin or other educational backgrounds, so that wider range of skill sets can be taken into account for matching
+2. **Project Advisory**: Task assessment agent is used only for the final judgement of the hackathon. However, theoreticaly, the assessment can happen anytime during the whole operation. In which case, the agent can serve as a project advisory or assistance
+3. **Dynamic Incentive Distribution**: Onchain incentive distribution can be improve once the assessment for the individual contributions are quantified. Based on the results, more dynamic versions of retro active distribution can be possible.
 
 ## Team
+1. **Agwn**: Agwn is the founder of Ludium and manages [10 + projects](https://github.com/Ludium-Official) for different foundations. The idea is later to be implemented into the Ludium Portal so that autonomous builder community collaboration can happen 
+2. **tchoi**: [tchoi](https://github.com/choidev617) is the frontend developer and LLM agent developer. He worked as a AI engineer for Ministry of Culture, Sports and Tourism and participated in Near Horizon AI hackathon in Korea during September 
+3. **Hugo**: [Hugo(https://github.com/energyGiver) is the backend developer setting up Reclaim Protocol SDK, data structure and managing the overall system architecture. He is leading the developement side
+4. **c0np4nn4**: [c0np4nn4[(https://github.com/c0np4nn4) is the contract developer setting up onchain ID and prize contract on Near. He is also working on Chain Abstraction features to connect prizes in Ethereum and Near
