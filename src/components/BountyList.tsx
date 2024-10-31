@@ -11,15 +11,6 @@ const BountyList = () => {
     { id: 'bounty4', title: 'Data Privacy Enhancement', reward: '$7,500', requirements: 'Improve data privacy measures' },
     { id: 'bounty5', title: 'NFT Marketplace Plugin', reward: '$6,000', requirements: 'Build an NFT marketplace feature' },
     { id: 'bounty6', title: 'Crypto Wallet Integration', reward: '$9,000', requirements: 'Integrate with popular crypto wallets' },
-    { id: 'bounty7', title: 'Smart Contract Optimization', reward: '$4,000', requirements: 'Optimize smart contract gas fees' },
-    { id: 'bounty8', title: 'AI-Powered Analytics', reward: '$12,000', requirements: 'Create an AI analytics tool' },
-    { id: 'bounty9', title: 'Cross-Chain Bridge Development', reward: '$15,000', requirements: 'Build a cross-chain bridge' },
-    { id: 'bounty10', title: 'DeFi Lending Protocol', reward: '$20,000', requirements: 'Develop a DeFi lending platform' },
-    { id: 'bounty11', title: 'Green Energy Blockchain', reward: '$10,000', requirements: 'Develop a green energy tracking system' },
-    { id: 'bounty12', title: 'Digital Identity Verification', reward: '$7,500', requirements: 'Create a decentralized identity system' },
-    { id: 'bounty13', title: 'Gaming NFT Integrations', reward: '$5,000', requirements: 'Enable NFTs for in-game assets' },
-    { id: 'bounty14', title: 'Supply Chain Transparency', reward: '$9,000', requirements: 'Track products on the blockchain' },
-    { id: 'bounty15', title: 'Healthcare Data Sharing', reward: '$10,000', requirements: 'Create a secure data-sharing protocol' },
   ];
 
   const goToBountyDetails = (bountyId: string) => {
@@ -28,7 +19,7 @@ const BountyList = () => {
 
   return (
     <div className={gameFlowStyles.gameFlow}>
-      <h1 className={gameFlowStyles.pageTitle}>Web3 Career Pathfinder</h1>
+      <h1 className={gameFlowStyles.pageTitle}>Builder Matching Systerm</h1>
       <ul className={gameFlowStyles.bountyList}>
         {bounties.map(bounty => (
           <li

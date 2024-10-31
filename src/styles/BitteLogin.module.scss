@@ -1,0 +1,92 @@
+// Color Variables
+:root {
+  --background-color: #1c1c2e;
+  --accent-color-1: #0079ff;
+  --highlight-color: #c7c7e8;
+  --primary-text: #b2b2cc;
+  --button-gradient: linear-gradient(90deg, #0079ff, #00e5ff);
+  --button-hover-gradient: linear-gradient(90deg, #00e5ff, #0079ff);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-shadow-color: rgba(0, 128, 255, 0.6);
+}
+
+// Main Container for Centering
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--highlight-color);
+}
+
+// Card Style for Login Box
+.card {
+  background: #2a2a3e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  animation: fadeIn 0.6s ease-out;
+}
+
+// Page Title Styling
+.pageTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--highlight-color);
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+// Message Styling
+.message {
+  font-size: 1.1rem;
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+}
+
+// Button Styling
+.connectButton {
+  background: var(--button-gradient);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 128, 255, 0.4);
+
+  &:hover:not(:disabled) {
+    background: var(--button-hover-gradient);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px var(--hover-shadow-color);
+  }
+
+  &:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+}
+
+// Fade-in Animation for Smooth Appearance
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+
+  

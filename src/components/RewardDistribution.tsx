@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import styles from '../styles/RewardDistribution.module.scss';
 
 const RewardDistribution: React.FC = () => {
-  const [rewardStatus, setRewardStatus] = useState("100% paid");
+  const [rewardStatus, setRewardStatus] = useState("");
   const [distributionMethod, setDistributionMethod] = useState("");
 
   const handleDistribution = (method: string) => {
     setDistributionMethod(method);
+    setRewardStatus("100% paid"); // Update reward status when distribution is selected
     alert(`Rewards will be distributed ${method === 'equal' ? 'equally among team members' : 'based on individual contributions'}.`);
   };
 
@@ -16,7 +17,7 @@ const RewardDistribution: React.FC = () => {
 
       <div className={styles.statusSection}>
         <h3 className={styles.sectionTitle}>Reward Status</h3>
-        <p>{rewardStatus}</p>
+        <p>{rewardStatus || "Pending distribution"}</p>
       </div>
 
       <div className={styles.distributionSection}>
@@ -45,3 +46,4 @@ const RewardDistribution: React.FC = () => {
 };
 
 export default RewardDistribution;
+

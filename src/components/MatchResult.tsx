@@ -5,8 +5,8 @@ import styles from '../styles/MatchResult.module.scss';
 
 const teammates = [
   {
-    name: "Alice",
-    role: "Developer",
+    name: "hugo",
+    role: "Backend",
     experience: 3,
     followers: 7,
     contributions: 318,
@@ -14,8 +14,8 @@ const teammates = [
     frameworks: ["NestJS", "Substrate", "PyTorch"]
   },
   {
-    name: "Bob",
-    role: "Designer",
+    name: "tchoi",
+    role: "Frontend",
     experience: 5,
     followers: 12,
     contributions: 150,
@@ -23,8 +23,8 @@ const teammates = [
     frameworks: ["React", "Next.js"]
   },
   {
-    name: "Carol",
-    role: "PM",
+    name: "c0np4nn4",
+    role: "Contract",
     experience: 4,
     followers: 10,
     contributions: 200,

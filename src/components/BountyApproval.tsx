@@ -7,7 +7,7 @@ const BountyApproval: React.FC = () => {
 
   const handleApproval = () => {
     // Navigate to the BountyAssigned page
-    navigate('/bounty-assigned');
+    navigate('/submit-work');
   };
 
   return (
