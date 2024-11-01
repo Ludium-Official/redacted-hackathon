@@ -43,5 +43,5 @@ Beyond hackathon, there are three potential usecases for the system
 ## Team
 1. **Agwn**: Agwn is the founder of Ludium and manages [10 + projects](https://github.com/Ludium-Official) for different foundations. The idea is later to be implemented into the Ludium Portal so that autonomous builder community collaboration can happen 
 2. **tchoi**: [tchoi](https://github.com/choidev617) is the frontend developer and LLM agent developer. He worked as a AI engineer for Ministry of Culture, Sports and Tourism and participated in Near Horizon AI hackathon in Korea during September 
-3. **Hugo**: [Hugo(https://github.com/energyGiver) is the backend developer setting up Reclaim Protocol SDK, data structure and managing the overall system architecture. He is leading the developement side
-4. **c0np4nn4**: [c0np4nn4[(https://github.com/c0np4nn4) is the contract developer setting up onchain ID and prize contract on Near. He is also working on Chain Abstraction features to connect prizes in Ethereum and Near
+3. **Hugo**: [Hugo](https://github.com/energyGiver) is the backend developer setting up Reclaim Protocol SDK, data structure and managing the overall system architecture. He is leading the developement side
+4. **c0np4nn4**: [c0np4nn4](https://github.com/c0np4nn4) is the contract developer setting up onchain ID and prize contract on Near. He is also working on Chain Abstraction features to connect prizes in Ethereum and Near
