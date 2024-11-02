@@ -10,7 +10,7 @@ const SubmitWork: React.FC = () => {
     e.preventDefault();
     if (repoLink) {
       alert(`Submitted work with repo link: ${repoLink}`);
-      // Navigate to the LLM Hackathon Judging page
+      
       navigate('/llm-hackathon-judging');
     } else {
       alert("Please enter a repository link before submitting.");

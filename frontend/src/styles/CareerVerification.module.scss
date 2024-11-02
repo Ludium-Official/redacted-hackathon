@@ -9,7 +9,7 @@
     --hover-shadow-color: rgba(0, 128, 255, 0.6);
   }
   
-  .gameFlow {
+  .pageContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,26 +38,13 @@
     text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
   }
   
-  .carouselContainer {
-    width: 100%;
-    overflow: hidden; /* To hide the overflow of sliding animation */
-    display: flex;
-    justify-content: center;
+  .message {
+    font-size: 1.1rem;
+    color: var(--primary-text);
     margin-bottom: 1.5rem;
   }
   
-  .carouselImage {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px var(--shadow-color);
-    opacity: 0; /* Start invisible to apply animation */
-    transform: translateX(100%); /* Start from the right */
-    animation: slideIn 0.5s forwards ease-in-out;
-  }
-  
-  .startGameFlowButton {
+  .platformButton {
     background: var(--button-gradient);
     color: #fff;
     padding: 12px 18px;
@@ -68,6 +55,9 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 12px rgba(0, 128, 255, 0.4);
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
   
     &:hover:not(:disabled) {
       background: var(--button-hover-gradient);
@@ -76,19 +66,7 @@
     }
   }
   
-  // Slide-in animation
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
   
-  // Fade-in Animation for Container
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -99,8 +77,6 @@
       transform: translateY(0);
     }
   }
-  
-  
   
   
   

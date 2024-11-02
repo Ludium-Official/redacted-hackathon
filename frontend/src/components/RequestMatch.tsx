@@ -7,13 +7,13 @@ const RequestMatch = () => {
   const navigate = useNavigate();
 
   const handleRequestMatch = () => {
-    setIsLoading(true); // Start loading
+    setIsLoading(true); 
 
-    // Simulate a delay of 2 seconds before navigation
+    
     setTimeout(() => {
-      setIsLoading(false); // Stop loading
-      navigate('/match-result'); // Navigate to match result page
-    }, 2000); // Adjust delay time as needed
+      setIsLoading(false); 
+      navigate('/match-result'); 
+    }, 2000); 
   };
 
   return (

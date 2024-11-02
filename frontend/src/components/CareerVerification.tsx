@@ -12,9 +12,9 @@ const CareerVerification = () => {
 
   const handlePlatformSelect = (platform: string) => {
     if (platform === 'github') {
-      navigate('/github-verification'); // Navigate to GitHub Verification page
+      navigate('/github-verification'); 
     }
-    // Add more cases for other platforms if needed
+    
   };
 
   return (

@@ -7,7 +7,6 @@
     --button-shadow-color: rgba(0, 128, 255, 0.6);
   }
   
-  // Main container for the MatchResult page
   .pageContainer {
     display: flex;
     flex-direction: column;
@@ -20,34 +19,44 @@
     text-align: center;
   }
   
-  // Title styling with a subtle glowing effect
+  
   .title {
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: var(--highlight-color);
-    text-shadow: 0px 0px 15px rgba(199, 199, 232, 0.8);
+    text-shadow: 0px 0px 10px rgba(199, 199, 232, 0.8);
   }
   
-  // Container for teammate cards
-  .teammateList {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+  
+  .statusSection, .distributionSection {
+    background: var(--card-background);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px var(--shadow-color);
   }
   
-  // Confirm button styling with gradient and hover effects
-  .confirmButton {
+  .sectionTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+  }
+  
+  
+  .distributeButton {
     padding: 12px 24px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
     background: var(--button-gradient);
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 5px 12px var(--button-shadow-color);
   
@@ -58,4 +67,16 @@
     }
   }
   
+  
+  .confirmationMessage {
+    background: var(--card-background);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    color: #b2b2cc;
+    font-size: 1.1rem;
+  }
   

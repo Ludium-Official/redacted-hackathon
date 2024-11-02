@@ -8,7 +8,7 @@ const BitteLogin = () => {
 
   const handleConnectWallet = () => {
     setIsConnected(true);
-    // Redirect to Request Match page after connecting wallet
+    
     setTimeout(() => navigate('/career-verification'), 500);
   };
 

@@ -13,7 +13,7 @@
     --hover-shadow-color: rgba(0, 128, 255, 0.6);
   }
   
-  // Main container for the Recommended Teammates page
+  
   .pageContainer {
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
     animation: fadeIn 0.6s ease-out;
   }
   
-  // Title styling with a subtle glowing effect
+  
   .pageTitle {
     font-size: 2.8rem;
     font-weight: 600;
@@ -37,7 +37,7 @@
     text-shadow: 0px 0px 15px rgba(199, 199, 232, 0.8);
   }
   
-  // Container for teammate cards with central alignment
+  
   .teammateList {
     display: flex;
     gap: 25px;
@@ -49,7 +49,7 @@
     box-shadow: 0 8px 20px var(--card-shadow-color);
   }
   
-  // Teammate card styling
+  
   .teammateCard {
     background: var(--card-background);
     border-radius: 12px;
@@ -70,7 +70,7 @@
     }
   }
   
-  // Teammate name and role styling
+  
   .builderName {
     font-size: 1.4rem;
     font-weight: bold;
@@ -86,7 +86,7 @@
     margin-bottom: 10px;
   }
   
-  // Experience badge styling
+ 
   .builderExperience {
     font-size: 0.95rem;
     color: var(--secondary-text);
@@ -97,7 +97,7 @@
     display: inline-block;
   }
   
-  // Profile details section (followers and contributions)
+  
   .profileDetails {
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     font-weight: 500;
   }
   
-  // Languages and frameworks section with badge styling
+  
   .languageFrameworkContainer {
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@
     border-radius: 5px;
   }
   
-  // Select button with gradient and hover effects
+  
   .selectButton {
     margin-top: 15px;
     padding: 8px 16px;
@@ -173,7 +173,7 @@
     }
   }
   
-  // Confirm button styling with additional animation
+  
   .confirmButton {
     margin-top: 30px;
     padding: 14px 30px;
@@ -194,7 +194,7 @@
     }
   }
   
-  // Animations for smooth appearance
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -217,7 +217,7 @@
     }
   }
   
-  // Responsive adjustments for mobile screens
+  
   @media (max-width: 768px) {
     .pageContainer {
       padding: 20px;

@@ -7,7 +7,7 @@
     --button-shadow-color: rgba(0, 128, 255, 0.6);
   }
   
-  // Page container
+  
   .pageContainer {
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     text-align: center;
   }
   
-  // Title styling
+  
   .title {
     font-size: 2.4rem;
     font-weight: bold;
@@ -29,7 +29,7 @@
     text-shadow: 0px 0px 10px rgba(199, 199, 232, 0.8);
   }
   
-  // Section styling
+  
   .section {
     background: var(--card-background);
     padding: 20px;
@@ -47,7 +47,7 @@
     margin-bottom: 10px;
   }
   
-  // Criteria list styling
+  
   .criteriaList {
     list-style: none;
     padding: 0;
@@ -59,7 +59,7 @@
     margin: 8px 0;
   }
   
-  // Completion status styling
+  
   .completionStatus {
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     margin-top: 10px;
   }
   
-  // Settlement button styling
+  
   .settlementButton {
     margin-top: 20px;
     padding: 12px 24px;
@@ -94,7 +94,7 @@
     }
   }
   
-  // Payment status styling
+ 
   .paymentStatus {
     font-size: 1rem;
     color: #b2b2cc;

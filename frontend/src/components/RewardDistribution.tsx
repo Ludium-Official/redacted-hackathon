@@ -7,7 +7,7 @@ const RewardDistribution: React.FC = () => {
 
   const handleDistribution = (method: string) => {
     setDistributionMethod(method);
-    setRewardStatus("100% paid"); // Update reward status when distribution is selected
+    setRewardStatus("100% paid"); 
     alert(`Rewards will be distributed ${method === 'equal' ? 'equally among team members' : 'based on individual contributions'}.`);
   };
 

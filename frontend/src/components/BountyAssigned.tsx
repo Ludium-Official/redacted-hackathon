@@ -6,7 +6,7 @@ const BountyAssigned: React.FC = () => {
   const navigate = useNavigate();
 
   const handleProceed = () => {
-    // Navigate to the SubmitWork page
+    
     navigate('/submit-work');
   };
 

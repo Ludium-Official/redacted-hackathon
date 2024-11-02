@@ -4,22 +4,23 @@
     --highlight-color: #c7c7e8;
     --button-gradient: linear-gradient(135deg, #0079ff, #00e5ff);
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --button-hover-shadow: rgba(0, 128, 255, 0.6);
+    --button-shadow-color: rgba(0, 128, 255, 0.6);
   }
   
-  // Container for the approval page
-  .approvalContainer {
+  
+  .pageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--background-color);
+    padding: 40px;
+    background: radial-gradient(circle at top left, #141427, var(--background-color));
   }
   
-  // Card styling for the approval section
-  .approvalCard {
+  
+  .card {
     background: var(--card-background);
-    padding: 30px;
+    padding: 30px 40px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 8px 20px var(--shadow-color);
@@ -27,8 +28,8 @@
     width: 100%;
   }
   
-  // Title styling for the approval card
-  .approvalTitle {
+ 
+  .title {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--highlight-color);
@@ -36,15 +37,15 @@
     text-shadow: 0 0 10px rgba(199, 199, 232, 0.8);
   }
   
-  // Message text styling
-  .approvalMessage {
+  
+  .message {
     font-size: 1rem;
     color: #b2b2cc;
     margin-bottom: 20px;
   }
   
-  // Approval button styling
-  .approvalButton {
+  
+  .proceedButton {
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: bold;
@@ -54,11 +55,11 @@
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 12px var(--button-hover-shadow);
+    box-shadow: 0 6px 12px var(--button-shadow-color);
   
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 16px var(--button-hover-shadow);
+      box-shadow: 0 8px 16px var(--button-shadow-color);
     }
   }
   
