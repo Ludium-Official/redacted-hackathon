@@ -2,7 +2,7 @@ use super::model::UserInfo;
 use near_sdk::{env, log, store::LookupMap, AccountId};
 
 /// 사용자 추가 함수
-pub fn add_user(
+pub fn _add_user(
     users: &mut LookupMap<AccountId, UserInfo>,
     account: AccountId,
     email: String,
@@ -24,7 +24,7 @@ pub fn add_user(
 }
 
 /// 사용자 조회 함수
-pub fn get_user(
+pub fn _get_user(
     users: &LookupMap<AccountId, UserInfo>,
     account_id: AccountId,
 ) -> Option<&UserInfo> {
@@ -32,7 +32,7 @@ pub fn get_user(
 }
 
 /// 사용자 업데이트 함수
-pub fn update_user(
+pub fn _update_user(
     users: &mut LookupMap<AccountId, UserInfo>,
     account: AccountId,
     email: Option<String>,
@@ -65,7 +65,7 @@ pub fn update_user(
 }
 
 /// 사용자 삭제 함수
-pub fn remove_user(users: &mut LookupMap<AccountId, UserInfo>, account: AccountId) {
+pub fn _remove_user(users: &mut LookupMap<AccountId, UserInfo>, account: AccountId) {
     if users.remove(&account).is_some() {
         log!("User {} removed successfully.", account);
     } else {

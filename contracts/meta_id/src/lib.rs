@@ -4,11 +4,11 @@ mod user;
 use crate::{
     role::{
         model::Role,
-        service::{add_role, get_role, remove_role, update_role},
+        service::{_add_role, _get_role, _remove_role, _update_role},
     },
     user::{
         model::UserInfo,
-        service::{add_user, get_user, remove_user, update_user},
+        service::{_add_user, _get_user, _remove_user, _update_user},
     },
 };
 use near_sdk::{log, near, store::LookupMap, AccountId};
@@ -28,14 +28,14 @@ impl Default for Contract {
         };
 
         // 임의의 사용자 추가
-        add_user(
+        _add_user(
             &mut contract.users,
             AccountId::from_str("user1.near").unwrap(),
             "user1@example.com".to_string(),
             "User One".to_string(),
             "ProviderA".to_string(),
         );
-        add_user(
+        _add_user(
             &mut contract.users,
             AccountId::from_str("user2.near").unwrap(),
             "user2@example.com".to_string(),
@@ -44,14 +44,14 @@ impl Default for Contract {
         );
 
         // 임의의 역할 추가
-        add_role(
+        _add_role(
             &mut contract.roles,
             "admin".to_string(),
             Some("Administrator role".to_string()),
             Some(vec![AccountId::from_str("user1.near").unwrap()]),
         );
 
-        add_role(
+        _add_role(
             &mut contract.roles,
             "editor".to_string(),
             Some("Editor role".to_string()),
@@ -70,24 +70,18 @@ impl Contract {
 
     /// 사용자 추가 래퍼 함수
     #[payable]
-    pub fn add_user_wrapper(
-        &mut self,
-        account: AccountId,
-        email: String,
-        name: String,
-        provider: String,
-    ) {
-        add_user(&mut self.users, account, email, name, provider);
+    pub fn add_user(&mut self, account: AccountId, email: String, name: String, provider: String) {
+        _add_user(&mut self.users, account, email, name, provider);
     }
 
     /// 사용자 조회 래퍼 함수
-    pub fn get_user_wrapper(&self, account_id: AccountId) -> Option<&UserInfo> {
-        get_user(&self.users, account_id)
+    pub fn get_user(&self, account_id: AccountId) -> Option<&UserInfo> {
+        _get_user(&self.users, account_id)
     }
 
     /// 사용자 업데이트 래퍼 함수
     #[payable]
-    pub fn update_user_wrapper(
+    pub fn update_user(
         &mut self,
         account: AccountId,
         email: Option<String>,
@@ -95,46 +89,46 @@ impl Contract {
         provider: Option<String>,
         roles: Option<Vec<String>>,
     ) {
-        update_user(&mut self.users, account, email, name, provider, roles);
+        _update_user(&mut self.users, account, email, name, provider, roles);
     }
 
     /// 사용자 삭제 래퍼 함수
     #[payable]
-    pub fn remove_user_wrapper(&mut self, account: AccountId) {
-        remove_user(&mut self.users, account);
+    pub fn remove_user(&mut self, account: AccountId) {
+        _remove_user(&mut self.users, account);
     }
 
     /// 역할 추가 래퍼 함수
     #[payable]
-    pub fn add_role_wrapper(
+    pub fn add_role(
         &mut self,
         role_name: String,
         description: Option<String>,
         assigned_users: Option<Vec<AccountId>>,
     ) {
-        add_role(&mut self.roles, role_name, description, assigned_users);
+        _add_role(&mut self.roles, role_name, description, assigned_users);
     }
 
     /// 역할 조회 래퍼 함수
-    pub fn get_role_wrapper(&self, role_name: String) -> Option<&Role> {
-        get_role(&self.roles, role_name)
+    pub fn get_role(&self, role_name: String) -> Option<&Role> {
+        _get_role(&self.roles, role_name)
     }
 
     /// 역할 업데이트 래퍼 함수
     #[payable]
-    pub fn update_role_wrapper(
+    pub fn update_role(
         &mut self,
         role_name: String,
         description: Option<String>,
         assigned_users: Option<Vec<AccountId>>,
     ) {
-        update_role(&mut self.roles, role_name, description, assigned_users);
+        _update_role(&mut self.roles, role_name, description, assigned_users);
     }
 
     /// 역할 삭제 래퍼 함수
     #[payable]
-    pub fn remove_role_wrapper(&mut self, role_name: String) {
-        remove_role(&mut self.roles, role_name);
+    pub fn remove_role(&mut self, role_name: String) {
+        _remove_role(&mut self.roles, role_name);
     }
 
     /// 역할을 사용자에게 할당하는 함수

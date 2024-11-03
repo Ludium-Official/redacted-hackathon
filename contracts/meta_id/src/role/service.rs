@@ -2,7 +2,7 @@ use super::model::Role;
 use near_sdk::{log, store::LookupMap, AccountId};
 
 /// 역할 추가 함수
-pub fn add_role(
+pub fn _add_role(
     roles: &mut LookupMap<String, Role>,
     role_name: String,
     description: Option<String>,
@@ -18,12 +18,12 @@ pub fn add_role(
 }
 
 /// 역할 조회 함수
-pub fn get_role(roles: &LookupMap<String, Role>, role_name: String) -> Option<&Role> {
+pub fn _get_role(roles: &LookupMap<String, Role>, role_name: String) -> Option<&Role> {
     roles.get(&role_name)
 }
 
 /// 역할 업데이트 함수
-pub fn update_role(
+pub fn _update_role(
     roles: &mut LookupMap<String, Role>,
     role_name: String,
     description: Option<String>,
@@ -41,7 +41,7 @@ pub fn update_role(
 }
 
 /// 역할 삭제 함수
-pub fn remove_role(roles: &mut LookupMap<String, Role>, role_name: String) {
+pub fn _remove_role(roles: &mut LookupMap<String, Role>, role_name: String) {
     if roles.remove(&role_name).is_some() {
         log!("Role '{}' removed successfully.", role_name);
     } else {
