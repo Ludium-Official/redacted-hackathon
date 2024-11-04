@@ -175,6 +175,7 @@ async fn test_assign_team_to_bounty() -> Result<(), Box<dyn std::error::Error>> 
         .args_json(json!({ "bounty_id": 0, "team_id": 0 }))
         .transact()
         .await?;
+
     assert!(outcome.is_success());
     Ok(())
 }

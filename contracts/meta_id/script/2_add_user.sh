@@ -1,4 +1,4 @@
-near call $NEAR_ID add_user_wrapper "$(jq -n \
+near call $NEAR_ID add_user "$(jq -n \
   --arg account "test-user.testnet" \
   --arg email "test-user@test-user.com" \
   --arg name "test user" \
