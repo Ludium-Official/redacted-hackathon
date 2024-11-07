@@ -12,7 +12,7 @@ import SubmitWork from './components/SubmitWork';
 import LLMHackathonJudging from './components/LLMHackathonJudging';
 import RewardDistribution from './components/RewardDistribution';
 
-import { Wallet } from './wallets/near';
+import Wallet from './wallets/near';
 import { NearContext } from './context';
 
 const wallet = new Wallet({ networkId: 'testnet', createAccessKeyFor: '' });
