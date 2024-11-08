@@ -1,7 +1,7 @@
 # [Ludium] Web3 Builder Matching System
 
 ## Overview
-Ludium is a Web3 builder commutunity in Korea that provides career opportunities for builders through educaiton, contents, bounties, and grants. In Web3 industry, hackathons serve as a great segway to onbaord new talents. However, from the beginner's perspective, it is hard to find a team, recieve feedbacks, and wait for the prize settlemtent. Ludium offers a AI based Web3 builder matching system that analyze the builder's skill set, assign teams, judge reulsts and settle payment through autnomous system.       
+Ludium is a Web3 builder commutunity in Korea that **provides career opportunities for builders** through educaiton, contents, bounties, and grants. In Web3 industry, hackathons serve as a great segway to onbaord new talents. However, from the beginner's perspective, it is hard to find a team, recieve feedbacks, and wait for the prize settlemtent. Ludium offers an **AI based Web3 builder matching system** that analyze the builder's skill set, assign teams, judge reulsts and settle payment through autnomous system.       
 
 ## Problem
 ![Problem](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/problem.png?raw=true)
@@ -20,14 +20,17 @@ Ludium propose a Web3 Builder Matching System that consists of the following fea
 4. **Onchain Contract Enforcement**: Validate the work provided by the builder. For all tasks assigned, the payment amount is deposited in advance. The payment is settled when the work is validated
  
 
-## Technical Breakdown
-![BMS Redacted Overview](https://github.com/Ludium-Official/redacted-hackathon/blob/main/images/redacted.png?raw=true)
+## User Flow
+![BMS Redacted Overview](./images/BMS-Architecture.png)
 
-Ludium's pathfinder consists of three core pillars
-1. **Onchain Builder Profile**: Onchain Self Sovereign ID(SSI) that stores builder data. It interacts with offchain data (ex. Github) using Reclaim Protocol's zkTLS data entry SDK
-2. **Mathcing Agent**: AI Agent that process the skill sets and matches the team based on the different skill sets
-3. **Task Assessment Agent**: AI agent that judges the submitted project based on the set criteria from the requirement
-4. **Onchain Prize Contract**: Onchain contract that holds the deposits for the hackathon prizes and distribute it when the team chooses the payment. It utilizes Chain Abstraction by Near so that pools can be set up in anychain(currently Ethereum / Near) whereas one treasury can be used for the settlement
+Ludium's builder matching system works as follows:
+1. **Login with Web3 Wallet**: User signin with the Web3 wallet. In this case, Bitte wallet is used for Near Login
+2. **Authenticate the  builder**: User authenticates the profile with the Reclaim Protocol to login to their Github page. It is to ensure that the person is authenticating is really the person of the profile owner
+3. **Analyze the skillsets**: AI agent retrieves the github repo, contribution, and commit data to analyze the skills. It assigns the builder to backend, frontend, and contract developer based on the previous activities
+4. **Assign Team**: AI Agent assigns the team based on the skillset. The objective is to find the optimal situation where all teams will have the highest number that fulfills all the skill categories
+5. **Submit Work**: User submits the work. Bounty program will gather all submitted work to be assessed for the judgement
+6. **Judge**: AI agent analyzes the submitted work and judge who is the winner based on a given criteria
+7. **Distribute Rward**: Onchain contract that holds the deposits for the hackathon prizes and distribute it when the team chooses the payment. It utilizes Chain Abstraction by Near so that pools can be set up in anychain(currently Ethereum / Near) whereas one treasury can be used for the settlement
 
 ## Use Cases
 Beyond hackathon, there are three potential usecases for the system 
