@@ -13,8 +13,10 @@ image_digest = "sha256:5013a742e19a95c108bdfce085a57bda2f1047248e5eb9f005a8adc1e
 container_build_command = ["cargo", "near", "build"]
 
 [dependencies]
-near-sdk = {version = "5.4"}
+near-sdk = {version = "5.4.0"}
 near-sdk-macros = "5.4"
+
+serde = "1.0.214"
 
 [dev-dependencies]
 near-sdk = { version = "5.5", features = ["unit-testing"] }
