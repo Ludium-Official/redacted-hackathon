@@ -7,7 +7,11 @@ pub struct UserInfo {
     pub email: String,
     pub name: String,
     pub provider: String,
-    pub roles: Vec<String>,
-    pub created_at: u64,
-    pub updated_at: u64,
+    pub career: Career,
+}
+
+#[derive(Clone, Default)]
+#[near(serializers = [json, borsh])]
+pub struct Career {
+    pub language: Vec<String>,
 }
