@@ -1,5 +1,5 @@
 [package]
-name = "prize"
+name = "bounty"
 description = "cargo-near-new-project-description"
 version = "0.1.0"
 edition = "2021"
